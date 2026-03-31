@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'res/header.dart';
+import 'res/insight_box.dart';
 
 void main() {
   runApp(const MainApp());
@@ -7,6 +8,7 @@ void main() {
 
 class AppColors {
   static const bgColor = Color(0xFF101C22);
+  static const TextColor = Color(0xFFFFFFFF);
 }
 
 class MainApp extends StatelessWidget {
@@ -36,7 +38,32 @@ class Skeleton extends StatelessWidget {
     return Column(
       children: [
         const Header(),
+        const SizedBox(height: 20),
+        const InsightBox(),
+        const SizedBox(height: 40),
+        const BasicTextBox(text: "Tiện ích", color: AppColors.TextColor, fontSize: 24),
       ]
+    );
+  }
+}
+
+class BasicTextBox extends StatelessWidget {
+  final String text;
+  final Color color;
+  final double fontSize;
+
+  const BasicTextBox({super.key, required this.text, required this.color, this.fontSize = 24});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          text,
+          style: TextStyle(color: color, fontSize: fontSize, fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 }
