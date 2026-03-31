@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'utilities.dart';
 
 const iconBgColor = Color(0xFF1E293B);
 
@@ -65,13 +66,13 @@ class WelcomeMessage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(Icons.wb_sunny_outlined, color: Colors.white),
+        Icon(Icons.wb_sunny_outlined, color: Colors.yellow),
         SizedBox(width: 8.0),
         Text(
           text,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 18.0,
+            fontSize: responsiveFont(context, 16),
             fontWeight: FontWeight.bold,
           ),
         ),

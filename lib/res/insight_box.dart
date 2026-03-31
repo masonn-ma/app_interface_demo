@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'utilities.dart';
 
 class CustomColors {
   static const insightBoxGrad = [
@@ -18,12 +19,12 @@ class InsightBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 220,
+      height: 200,
       width: double.infinity,
 
       // Box decoration with gradient background and rounded corners
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(25),
         gradient: const LinearGradient(
           colors: CustomColors.insightBoxGrad,
           begin: Alignment.topLeft,
@@ -71,14 +72,14 @@ class InsightBoxContent extends StatelessWidget {
                     Icon(
                       Icons.fingerprint,
                       color: CustomColors.TextColor,
-                      size: 30,
+                      size: 25,
                     ),
                     SizedBox(width: 10),
                     Text(
                       "CHỦNG VÂN TAY: WHORL",
                       style: TextStyle(
                         color: CustomColors.TextColor,
-                        fontSize: 14.0,
+                        fontSize: responsiveFont(context, 12),
                       ),
                     ),
                   ],
@@ -89,7 +90,7 @@ class InsightBoxContent extends StatelessWidget {
                     "Daily Insight",
                     style: TextStyle(
                       color: CustomColors.TextColor,
-                      fontSize: 24.0,
+                      fontSize: responsiveFont(context, 18),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -100,7 +101,7 @@ class InsightBoxContent extends StatelessWidget {
                     "Sức mạnh của sự tập trung hôm nay sẽ giúp bạn hoàn thành mục tiêu nhanh gấp đôi",
                     style: TextStyle(
                       color: CustomColors.TextColor,
-                      fontSize: 14.0,
+                      fontSize: responsiveFont(context, 12),
                     ),
                   ),
                 ),
@@ -111,11 +112,23 @@ class InsightBoxContent extends StatelessWidget {
                     style: FilledButton.styleFrom(
                       backgroundColor: CustomColors.ButtonColor,
                       foregroundColor: CustomColors.TextColorSecondary,
+
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 6,
+                      ), // 🔹 smaller padding
+                      minimumSize: Size.zero, // 🔹 removes default min size
+                      tapTargetSize: MaterialTapTargetSize
+                          .shrinkWrap, // 🔹 removes extra touch area
+
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),
                     ),
-                    child: const Text("Xem chi tiết"),
+                    child: Text(
+                      "Xem chi tiết",
+                      style: TextStyle(fontSize: responsiveFont(context, 12)),
+                    ),
                   ),
                 ),
               ],
