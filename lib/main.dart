@@ -20,8 +20,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: AppColors.bgColor,
+        appBar: Header(),
         body: SafeArea(child: Skeleton()),
       ),
     );
@@ -37,8 +39,6 @@ class Skeleton extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
       child: Column(
         children: [
-          const Header(),
-          const SizedBox(height: 20),
           const InsightBox(),
           const SizedBox(height: 30),
           const BasicTextBox(
