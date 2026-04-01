@@ -101,7 +101,7 @@ class InsightBoxContent extends StatelessWidget {
                     "Sức mạnh của sự tập trung hôm nay sẽ giúp bạn hoàn thành mục tiêu nhanh gấp đôi",
                     style: TextStyle(
                       color: CustomColors.TextColor,
-                      fontSize: responsiveFont(context, 12),
+                      fontSize: responsiveFont(context, 10),
                     ),
                   ),
                 ),
