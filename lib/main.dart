@@ -1,9 +1,10 @@
+import 'package:app_interface_demo/views/db_showcase.dart';
 import 'package:flutter/material.dart';
-import 'res/header.dart';
-import 'res/insight_box.dart';
-import 'res/card_grid.dart';
-import 'res/progress_tracker.dart';
-import 'res/utilities.dart';
+import 'views/header.dart';
+import 'views/insight_box.dart';
+import 'views/card_grid.dart';
+import 'views/progress_tracker.dart';
+import 'controllers/utilities.dart';
 
 void main() {
   runApp(const MainApp());
@@ -24,7 +25,8 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: AppColors.bgColor,
         appBar: Header(),
-        body: SafeArea(child: Skeleton()),
+        // body: SafeArea(child: Skeleton()),
+        body: SafeArea(child: DbShowcase()),
       ),
     );
   }

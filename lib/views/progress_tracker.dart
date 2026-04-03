@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'utilities.dart';
+import '../controllers/utilities.dart';
 
 enum TimelineStatus { done, inProgress, locked }
 

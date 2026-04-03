@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'utilities.dart';
+import '../controllers/utilities.dart';
 
 const iconBgColor = Color(0xFF1E293B);
 

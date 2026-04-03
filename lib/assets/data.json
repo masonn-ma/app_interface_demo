@@ -1,0 +1,42 @@
+[
+    {
+        "id": "u1",
+        "name": "Alice",
+        "age": 25
+    },
+    {
+        "id": "u2",
+        "name": "Bob",
+        "age": 30
+    },
+    {
+        "id": "u3",
+        "name": "Charlie",
+        "age": 22
+    },
+    {
+        "id": "u4",
+        "name": "Diana",
+        "age": 28
+    },
+    {
+        "id": "u5",
+        "name": "Ethan",
+        "age": 35
+    },
+    {
+        "id": "u6",
+        "name": "Fiona",
+        "age": 27
+    },
+    {
+        "id": "u7",
+        "name": "George",
+        "age": 40
+    },
+    {
+        "id": "u8",
+        "name": "Hannah",
+        "age": 24
+    }
+]

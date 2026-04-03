@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'utilities.dart';
+import '../controllers/utilities.dart';
 
 class CustomColors {
   static const insightBoxGrad = [
